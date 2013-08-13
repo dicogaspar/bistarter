@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var fsread = require('fs');
+var fs = require('fs');
 
 var dado = fs.readFileSync('index.html',"utf-8");
 
