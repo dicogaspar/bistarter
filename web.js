@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
+var fsread = require('fs');
+
+var dado = fs.readFileSync('index.html',"utf-8");
+
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(fs.readFileSync('index.html','utf-8');
+  response.send(dado);
 });
 
 var port = process.env.PORT || 5000;
